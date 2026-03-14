@@ -39,7 +39,7 @@ export default function UserRegisterPage() {
     try {
       setIsloading(true);
       const result = await axios.post(
-        "http://localhost:7000/user/register",
+        "https://versal-live.vercel.app/user/register",
         formData
       );
       setIsloading(false);

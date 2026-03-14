@@ -17,11 +17,10 @@ export default function ProfileInfo() {
     const getprofile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:7000/user/profile/${data?.Id}`,
+          `https://versal-live.vercel.app/user/profile/${data?.Id}`,
           { headers: { Authorization: `Bearer ${data.token}` } }
         );
         setResult({
-          ...result,
           id: res?.data?.Id,
           username: res?.data?.username,
           email: res?.data?.useremail,
@@ -31,12 +30,12 @@ export default function ProfileInfo() {
       }
     };
     if (data?.token) getprofile();
-  }, [data?.Id, data?.token, result]);
+  }, [data?.Id, data?.token]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-linear-to-r from-blue-500 to-purple-600 text-white">
       <div className="shadow-md rounded-lg p-5 w-11/12 md:w-1/2 lg:w-1/3 bg-orange-300 font-bold">
-        <h1 className="text-2xl font-bold text-center mb-4">
+        <h1 className="text-3xl text-emerald-950 font-bold text-center mb-4">
           Your Profile Information
         </h1>
         <div className="mb-4">

@@ -23,7 +23,7 @@ export default function LoginPage() {
     try {
       setIsLoading(true);
       const result = await axios.post(
-        "https://versal-live-oiwgq9b3n-kumar-anil26s-projects.vercel.app/user/login",
+        "https://versal-live.vercel.app/user/login",
         credential
       );
       setIsLoading(false);

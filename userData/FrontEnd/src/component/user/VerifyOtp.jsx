@@ -21,7 +21,7 @@ export default function VerifyOtp() {
     otp.current.value = null;
     try {
       const result = await axios.post(
-        "http://localhost:7000/user/verify",
+        "https://versal-live.vercel.app/user/verify",
         vefiData
       );
       alert(result.data.message);
